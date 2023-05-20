@@ -57,7 +57,7 @@ export default async function PostPage({ params }: PostProps) {
           {post.description}
         </p>
       )}
-      <hr className="my-4" />
+      <hr className="my-4 border-[#ec3750]" />
       <Mdx code={post.body.code} />
     </article>
   )
