@@ -54,7 +54,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   <p>exploring the edges of the extraordinary</p>
                 </div>
                 <nav className="ml-auto space-x-6">
-                  <Link href="https://cytronicoder.com" target="_blank">
+                  <Link href="https://cytronicoder.com">
                     Portfolio
                   </Link>
                 </nav>
