@@ -66,7 +66,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <hr className="my-4 border-[#ec3750]" />
               <p>
                 Copyright &copy; {new Date().getFullYear()} by{" "}
-                <Link href="https://cytronicoder.com" target="_blank">
+                <Link href="https://cytronicoder.com">
                   Zeyu Yao
                 </Link>
                 .
