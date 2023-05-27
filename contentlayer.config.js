@@ -4,7 +4,7 @@ import { defineDocumentType, makeSource } from "contentlayer/source-files"
 const computedFields = {
   slug: {
     type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    resolve: (doc) => `/posts/${doc._raw.flattenedPath}`,
   },
   slugAsParams: {
     type: "string",
