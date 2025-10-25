@@ -5,13 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "prebuild": "npm run generate-covers",
+    "prebuild": "pnpm run generate-covers",
     "start": "next start",
     "lint": "next lint",
     "generate-covers": "node scripts/generate-all-covers.js",
     "generate-covers:force": "node scripts/generate-all-covers.js --force",
-    "setup-covers": "pip3 install -r scripts/requirements.txt && npm run generate-covers:force",
-    "predeploy": "npm run setup-covers && git add posts/ public/covers/ && git commit -m 'chore: update covers' || true"
+    "setup-covers": "pip3 install -r scripts/requirements.txt && pnpm run generate-covers:force",
+    "predeploy": "pnpm run setup-covers && git add posts/ public/covers/ && git commit -m 'chore: update covers' || true"
   },
   "dependencies": {
     "date-fns": "^3.6.0",
