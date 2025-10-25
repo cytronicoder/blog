@@ -11,6 +11,18 @@ const nunito = Nunito({
 export const metadata: Metadata = {
     title: "Peter's Bookstore",
     description: "I write about thoughts, stories, and ideas.",
+    openGraph: {
+        title: "Peter's Bookstore",
+        description: "I write about thoughts, stories, and ideas.",
+        type: 'website',
+        siteName: "Peter's Bookstore",
+    },
+    twitter: {
+        card: 'summary',
+        title: "Peter's Bookstore",
+        description: "I write about thoughts, stories, and ideas.",
+        creator: '@cytronicoder',
+    },
 };
 
 export default function RootLayout({

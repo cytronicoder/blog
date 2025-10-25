@@ -1,7 +1,10 @@
 ---
-title: "Hacking PowerSchool"
+title: Hacking PowerSchool
 date: "2025-10-25"
-excerpt: "Wouldn't it be nice if my school schedule was automatically added to my calendar?"
+excerpt: >-
+  Wouldn't it be nice if my school schedule was automatically added to my
+  calendar?
+image: /covers/hacking-powerschool.png
 ---
 
 PowerSchool is a popular student information system used by schools worldwide. However, most students don't regularly check it. Every semester, I'd log into PowerSchool, copy-paste my schedule into a spreadsheet, then manually add events to Google Calendar. With classes changing rooms, teachers, and times, it was a weekly chore.
@@ -13,7 +16,7 @@ In this post, I'll walk you through how I reverse-engineered PowerSchool's backe
 I started by inspecting the network requests PowerSchool made when I logged in and viewed my schedule to find the relevant API endpoints.
 
 ![Some network requests related to "calendar" in PowerSchool](https://hc-cdn.hel1.your-objectstorage.com/s/v3/45dd68f3feb79923a372ba3c958d060d18aad6b3_image.png)
-*Some network requests related to "calendar" in PowerSchool*
+_Some network requests related to "calendar" in PowerSchool_
 
 The first interesting request I found was to the following endpoint:
 

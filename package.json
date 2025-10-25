@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate-covers && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-covers": "node scripts/generate-all-covers.js",
+    "generate-covers:force": "node scripts/generate-all-covers.js --force"
   },
   "dependencies": {
     "next": "^14.2.0",

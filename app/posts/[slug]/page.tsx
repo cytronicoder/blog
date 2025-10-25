@@ -12,15 +12,33 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
-  
+
   if (!post) {
     return {};
   }
 
-  return {
-    title: `${post.title} | My Blog`,
+  const baseMetadata = {
+    title: `${post.title} | Peter's Bookstore`,
     description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: post.date,
+      authors: ['Peter'],
+      siteName: "Peter's Bookstore",
+      ...(post.image && { images: [{ url: post.image }] }),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      creator: '@cytronicoder',
+      ...(post.image && { images: [post.image] }),
+    },
   };
+
+  return baseMetadata;
 }
 
 export default function PostPage({ params }: { params: { slug: string } }) {
@@ -44,14 +62,14 @@ export default function PostPage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-      <div 
+      <div
         className="prose prose-lg max-w-none"
         style={{ color: 'var(--text-color)' }}
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 
       <div className="mt-12 pt-8" style={{ borderTop: '1px solid var(--foreground)' }}>
-        <a 
+        <a
           href="/"
           className="font-medium transition-colors hover:opacity-80"
           style={{ color: 'var(--primary-color)' }}
