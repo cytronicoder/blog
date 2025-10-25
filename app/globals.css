@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f4f1e9;
+  --foreground: #e9e2d7;
+  --primary-color: #6a8e7f;
+  --text-color: #5c554c;
+  --background-color: #fcfaf6;
+}
+
+[data-theme="dark"] {
+  --background: #2f4f4f;
+  --foreground: #d3d3d3;
+  --primary-color: #5f9ea0;
+  --text-color: #f5f5dc;
+  --background-color: #1a202c;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--background-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.prose {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.prose a {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.prose a:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.prose strong {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.prose code {
+  color: var(--text-color);
+  background: var(--foreground);
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.prose code::before,
+.prose code::after {
+  content: none;
+}
+
+.prose pre {
+  background: var(--foreground);
+  border: 1px solid var(--primary-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.prose pre code {
+  background: transparent;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.prose blockquote {
+  color: var(--text-color);
+  border-left-color: var(--primary-color);
+  opacity: 0.9;
+  transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.prose img {
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.prose img + em {
+  display: block;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-style: normal;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+button {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, opacity 0.3s ease;
+}
+
+a {
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+[data-theme="dark"] .prose pre {
+  background: #2a2a2a;
+  border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .prose code {
+  background: var(--text-color);
+  color: var(--background-color);
+}
+
+[data-theme="dark"] .prose pre code {
+  background: transparent;
+  color: var(--text-color);
+}
