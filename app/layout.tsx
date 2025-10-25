@@ -35,7 +35,7 @@ export default function RootLayout({
                     </main>
                     <footer>
                         <div className="max-w-4xl mx-auto px-4 py-6 text-center" style={{ color: 'var(--text-color)', opacity: 0.8 }}>
-                            <p>© {new Date().getFullYear()} Peter's Bookstore. All rights reserved.</p>
+                            <p>© {new Date().getFullYear()} Peter's Bookstore. All rights reserved. Check out my <a href="https://www.cytronicoder.com" style={{ color: 'var(--primary-color)' }}>personal website</a> for more!</p>
                         </div>
                     </footer>
                 </div>
